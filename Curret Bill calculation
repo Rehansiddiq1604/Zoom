@@ -1,0 +1,51 @@
+import java.util.*;
+
+public class Work {
+    public static void main(String args[]) {
+        int unit;
+        String type;
+
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Enter the unit: ");
+        unit = s.nextInt();
+        s.nextLine(); // To consume leftover newline
+
+        System.out.print("Enter the connection type: ");
+        type = s.nextLine();
+
+        String t = type.toLowerCase();
+
+        if (t.equals("domestic")) {
+            if (unit <= 100) {
+                int ans = unit * 1;
+                System.out.print("Amount: " + ans);
+            } else if (unit >= 101 && unit <= 200) {
+                double ans = unit * 2.50;
+                System.out.print("Amount: " + ans);
+            } else if (unit >= 201 && unit <= 500) {
+                int ans = unit * 4;
+                System.out.print("Amount: " + ans);
+            } else {
+                int ans = unit * 6;
+                System.out.print("Amount: " + ans);
+            }
+        } else if (t.equals("commercial")) {
+            if (unit <= 100) {
+                int ans = unit * 2;
+                System.out.print("Amount: " + ans);
+            } else if (unit >= 101 && unit <= 200) {
+                double ans = unit * 4.50;
+                System.out.print("Amount: " + ans);
+            } else if (unit >= 201 && unit <= 500) {
+                int ans = unit * 6;
+                System.out.print("Amount: " + ans);
+            } else {
+                int ans = unit * 7;
+                System.out.print("Amount: " + ans);
+            }
+        } else {
+            System.out.print("Sorry, wrong type");
+        }
+    }
+}
