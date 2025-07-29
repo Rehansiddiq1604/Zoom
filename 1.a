@@ -1,0 +1,9 @@
+sum = 0
+n1 = []
+l = [(1, 2, 3), (4, 5)]
+for i in l:
+    sum = 0
+    for e in i:
+        sum = sum + e
+    n1.append(sum)
+print(n1)
